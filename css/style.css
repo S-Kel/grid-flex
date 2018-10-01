@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+/* Define root variables  */
+
+:root {
+	--main-txt-color: #333;
+	--main-header-color: #fff;
+	--shadow: 5px 8px 5px rgba(0, 0, 0, 0.203);
+	--wrapper-width: 90%;
+	--wrapper-height: 300px;
+	--mx-container-width: 1140px;
+	--bg-secondary: #6c757d;
+	--bg-primary: #007bff;
+	--bg-success: #28a645;
+	--bg-danger: #dc3545;
+	--bg-warning: #ffc107;
+	--bg-info: #17a2b8;
+	--bg-light: #f8f9fa;
+	--bg-dark: #343a40;
+	--bg-white: #fff;
+	--bg-grey: #eee;
+	--bg-navbar: #e2e9f1;
+	--bg-sleek: #08faa9;
+}
+
+.masthead {
+	--main-masthead-color: #333;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	/*	font-stretch: 100%;*/
+}
+
+
+/*Main container styles */
+
+#main-container {
+	margin: 0 auto;
+	max-width: var(--mx-container-width);
+	flex-basis: 95%;
+	min-width: 325px;
+	height: auto;
+}
+
+.main-header {
+	display: flex;
+	flex-direction: column;
+	/*	border: 2px solid black;*/
+	/*	border: none;*/
+	padding: 0 1px;
+}
+
+
+/* Styles Mobile First Approach */
+
+.masthead {
+	width: 100%;
+	min-height: 256px;
+	height: 100%;
+	background: #000 url("../images/mobilescreen.png") no-repeat center top;
+	background-size: cover;
+	order: 1;
+	padding: 20px;
+}
+
+
+/*Styling mast head text content */
+
+.masthead .masthead-body {
+	/*	display: none;*/
+	/*	width: 100%;*/
+	height: auto;
+	/*	color: var(--bg-secondary);*/
+	color: #205FD2;
+	padding: 10px;
+	/*
+	border: 1px solid #111;
+	margin: 20px auto;
+	text-align: center;
+	line-height: 1.3;
+	background: #0AB1FB; rgba(0, 0, 0, .5);
+	border-radius: 5px;
+	box-shadow: 1px 2px 26px rgba(255, 255, 0, .25);
+*/
+}
+
+.masthead .masthead-body .masthead-buttons {
+	margin: 10px auto;
+}
+
+.masthead .masthead-body .downloadCV-button,
+.masthead .masthead-body .hireMe-button {
+	font-size: .8rem;
+	background: yellow;
+	display: inline-block;
+	padding: 5px 15px;
+	border-radius: 5px;
+	opacity: 0.75;
+	transition: all 1s ease-in;
+}
+
+.masthead .masthead-body .downloadCV-button {
+	background: #3e81c5;
+	/*dodgerBlue; var(--bg-primary);*/
+	margin-right: 5px;
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+
+.masthead .masthead-body .hireMe-button {
+	/*	padding: 5px 20px;*/
+	background: #333;
+	border: 1px solid var(--bg-secondary);
+	/*	opacity: 0.75;*/
+
+	position: absolute;
+	right: 156px;
+	bottom: 20px;
+}
+
+.masthead .masthead-body .downloadCV-button:hover {
+	background: #9a7434;
+	/*	var(--bg-sleek);*/
+	color: #ccc;
+}
+
+.masthead .masthead-body .hireMe-button:hover {
+	background: var(--bg-light);
+	color: #333;
+	/*	font-size: 1rem;*/
+}
+
+.masthead .masthead-body a {
+	text-decoration: none;
+	color: var(--bg-light);
+}
+
+
+/*Social Media styles */
+
+.mh-media-social {
+	display: flex;
+	order: 3;
+}
+
+.mh-media-social .fab-icons {
+	flex-basis: 100%;
+	/*	height: 100%;*/
+	padding: 10px;
+	background: var(--bg-grey);
+	text-align: center;
+	border-right: 1px solid var(--bg-light);
+	transition: all 1s ease-in;
+}
+
+.mh-media-social .fab-icons .fab {
+	color: var(--bg-dark);
+	font-size: 2.2rem;
+	transform: scale(1.0);
+	transition: all 1s;
+}
+
+.mh-media-social .fab-icons:hover {
+	background: #ccc;
+}
+
+.mh-media-social .fab-icons .fab:hover {
+	color: deepskyblue;
+	transform: scale(1.2);
+}
+
+
+/*Navigation and Logo Styles */
+
+.navbar {
+	flex-basis: 100%;
+	height: 100px;
+	padding: 4px;
+	text-align: center;
+	background: var(--bg-navbar);
+	order: 0;
+}
+
+.navbar img {
+	width: 50px;
+	height: auto;
+}
+
+
+/* Mobile styles */
+
+@media only screen and (max-width: 400px) {
+	body {
+		background: #f09a9d;
+	}
+}
+
+
+/* Tablet styles */
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+	body {
+		background: #f5cf8e;
+	}
+
+	.main-header {
+		flex-direction: row;
+		flex-wrap: wrap;
+		background: yellow;
+	}
+
+	.masthead {
+		flex: 1;
+		height: auto;
+		opacity: 0.85;
+		background: #000 url("../images/smallscreen.png") no-repeat center top;
+		background-size: cover;
+	}
+
+	.masthead .masthead-body {
+		width: 90%;
+		height: auto;
+		line-height: 2;
+		font-size: 1.2rem;
+	}
+
+	.masthead .masthead-body .masthead-buttons {
+		margin: 20px auto;
+	}
+
+	/*Navigation and Logo Styles */
+	.navbar {
+		height: 62px;
+		background: #eee;
+		order: 3;
+	}
+
+	.navbar img {
+		width: 30px;
+		/*		height: auto;*/
+	}
+
+	/*Social Media styles */
+	.mh-media-social {
+		flex-direction: column;
+		order: 3;
+	}
+
+	.mh-media-social .fab-icons {
+		border: 1px solid var(--bg-light);
+	}
+}
+
+
+/* Desktop styles */
+
+@media only screen and (min-width: 961px) {
+	body {
+		background: #b2d6ff;
+	}
+
+	.masthead {
+		height: 384px;
+		opacity: .75;
+		position: relative;
+		/*		background: #000 url("../images/bg-header.jpg") no-repeat center top;*/
+		/*		background-image: #fff, url("../images/bg-header.jpg");*/
+		/*background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+                  url("../images/bg-header.jpg");*/
+		/*        background-image: linear-gradient(rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 0), url ("../images/bg-header.jpg");*/
+		background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 55%, rgba(255, 255, 255, 0.9) 0%, transparent 50%), url(../images/bg-header.jpg);
+
+		background-size: cover;
+	}
+
+	.masthead .masthead-body h1 {
+		padding-bottom: 10px;
+		font-size: 2.5rem;
+		text-transform: uppercase;
+	}
+
+	.masthead .masthead-body p {
+		color: #000;
+		font-size: 1.5rem;
+		line-height: 150%;
+		letter-spacing: 1.8px;
+	}
+
+	.masthead .masthead-body {
+		width: 85%;
+		/*		line-height: 2;*/
+		font-size: 1.4rem;
+	}
+
+	.masthead .masthead-body .masthead-buttons {
+		margin: 20px auto;
+	}
+}
+
+
+/* Mobile styles */
+
+
+/*
+@media only screen and (max-width: 367px) {
+	
+}
+@media only screen and (max-device-width: 667px) {
+	.imgClass {
+		        content:url("../images/bg-masthead-img.jpg");
+	}
+}
+*/
+
+
+/* Tablet styles */
+
+
+/*
+@media only screen and (min-device-width: 667px) {
+	.masthead {
+		height: 384px;
+		opacity: .75;
+		background: #000 url("../images/bg-masthead-img.jpg") no-repeat center top;
+		background-size: cover;
+	}
+}
+.fa-twitter:before {
+    content: "\f099";
+}
+*/
